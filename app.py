@@ -2,10 +2,7 @@ import os
 import sys
 import json
 # import findResponse
-from __future__ import unicode_literals
-import random
-import logging
-import os
+
 import requests
 from flask import Flask, request
 
