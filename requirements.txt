@@ -1,2 +1,9 @@
+certifi==2017.7.27.1
+chardet==3.0.4
+gunicorn==19.7.1
+idna==2.6
+nltk==3.2.4
+requests==2.18.4
+six==1.10.0
 textblob==0.13.0
-gunicorn==19.6.0
+urllib3==1.22
