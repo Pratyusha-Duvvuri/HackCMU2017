@@ -25,14 +25,15 @@
       var labelIndex = 0;
 
       function initialize() {
-        var cmu = { lat:40.443678, lng: -79.942706 };
+        var cmu = { lat:21.933298, lng:-78.650689 };
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
+          zoom: 10,
           center: cmu
         });
         var locations = {
-          'Starbucks':{lat:40.444625, lng: -79.948507},
-          "iNoodle":{lat:40.443291, lng: -79.945553},
+          "Category 3":{lat:21.933298, lng:-78.650689},
+          //'Starbucks':{lat:40.444625, lng: -79.948507},
+          //"iNoodle":{lat:40.443291, lng: -79.945553},
         };
         var largeInfowindow = new google.maps.InfoWindow();
         var bounds = new google.maps.LatLngBounds();
