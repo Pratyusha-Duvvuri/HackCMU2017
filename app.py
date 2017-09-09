@@ -1,12 +1,18 @@
 import os
 import sys
 import json
+import ToneAnal
 
 import requests
 from flask import Flask, request
 
 app = Flask(__name__)
 
+tone_analyzer = ToneAnalyzerV3(
+  version='{version}',
+  username='{username}',
+  password='{password}'
+)
 
 @app.route('/', methods=['GET'])
 
