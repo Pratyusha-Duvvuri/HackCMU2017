@@ -35,6 +35,11 @@ def calculateWithResults(data):
         print()
     print() 
 
+"""
+Okay so the idea here is to put in 
+
+"""
+
 def display_results(data):
     data = json.loads(str(data))
     print(data,"PLPLPLPL")
@@ -66,13 +71,13 @@ def main():
     if len(data) >= 1:
         if data == 'q'.lower():
             exit
-        # results = analyze_tone(data)
-        display_results_fake("ad")
-
-        # if results != False:
-        #     display_results(results)
-        #     exit
-        # else:
-        #     print("Something went wrong")
+        # display_results_fake("ad")
+        
+        results = analyze_tone(data)
+        if results != False:
+            display_results(results)
+            exit
+        else:
+            print("Something went wrong")
  
 main()
