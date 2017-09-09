@@ -8,6 +8,9 @@ os.environ['NLTK_DATA'] = os.getcwd() + '/nltk_data'
 
 from textblob import TextBlob
 
+import textblob.download_corpora
+textblob.download_corpora.download_all()
+
 FILTER_WORDS=[
     "beeyotch",
     "biatch",
