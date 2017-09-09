@@ -48,6 +48,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
+
 <div class="wrapper row3">
   <main class="hoc container clear"> 
     <!-- main body -->
@@ -60,20 +61,20 @@ Licence URI: http://www.os-templates.com/template-terms
     <ul class="nospace group center">
       <li class="one_third first">
         <article><a href="#"><i class="icon btmspace-30 fa fa-500px"></i></a>
-          <h6 class="heading">Water</h6>
-          <p>Needed: 20 Donated: 30</p>
+          <h6 class="heading" >Water</h6>
+           <p id="insert_water"></p>
         </article>
       </li>
       <li class="one_third">
         <article><a href="#"><i class="icon btmspace-30 fa fa-adjust"></i></a>
           <h6 class="heading">Food</h6>
-          <p>Needed: 20 Donated: 30</p>
+          <p id="insert_food"></p>
         </article>
       </li>
       <li class="one_third">
         <article><a href="#"><i class="icon btmspace-30 fa fa-amazon"></i></a>
-          <h6 class="heading">Clothing</h6>
-          <p>Needed: 20 Donated: 30</p>
+          <h6 class="heading" id="">Clothing</h6>
+          <p id="insert_clothing"></p>
         </article>
       </li>
 
@@ -108,6 +109,29 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
+<script>
+//counter for Donate page
+
+var food_need = Math.floor(Math.random() * (3000- 2000) + 2000);
+var food_donate = Math.floor(Math.random() * (3000- 2000) + 2000);
+var water_need = Math.floor(Math.random() * (3000- 2000) + 2000);
+var water_donate = Math.floor(Math.random() * (3000- 2000) + 2000);
+var clothing_need = Math.floor(Math.random() * (1500- 500) + 500);
+var clothing_donate = Math.floor(Math.random() * (1500- 500) + 500);
+
+document.getElementById("insert_food").innerHTML = "Needed: " + food_need + " Donated: " + food_donate;
+document.getElementById("insert_water").innerHTML = "Needed: " + water_need + " Donated: " + water_donate;
+document.getElementById("insert_clothing").innerHTML = "Needed: " + clothing_need + " Donated: " + clothing_donate;
+
+
+function assign_id(need, donate){
+    if (need>donate) {return "no";}
+    else{return "yes";}
+}
+
+
+
+</script>
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
