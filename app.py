@@ -42,7 +42,8 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    send_message(sender_id, findResponse.broback(message_text))
+                    # send_message(sender_id, findResponse.broback(message_text))
+                    send_message(sender_id, "s")
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
@@ -80,7 +81,7 @@ def send_message(recipient_id, message_text):
         log(r.text)
 
 def log(message):  # simple wrapper for logging to stdout on heroku
-    print str(message)
+    print(str(message))
     sys.stdout.flush()
 
 
