@@ -16,12 +16,6 @@ tone_analyzer = ToneAnalyzerV3(
 
 @app.route('/', methods=['GET'])
 
-def findReply(text):
-    if(text!=""):
-        return "ayyFam"
-    else:
-        return "bruh"
-
 
 def verify():
     # when the endpoint is registered as a webhook, it must echo back
@@ -53,8 +47,7 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    send_message(sender_id, findReply(message_text))
-                    print("okay")
+                    send_message(sender_id, "Tree")
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
