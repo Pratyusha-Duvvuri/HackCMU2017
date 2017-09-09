@@ -2,7 +2,7 @@ from __future__ import print_function, unicode_literals
 import random
 import logging
 import os
-import ToneAnalyzer
+import ToneAnalyzer.py
 
 os.environ['NLTK_DATA'] = os.getcwd() + '/nltk_data'
 
