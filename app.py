@@ -1,7 +1,7 @@
 import os
 import sys
 import json
-import ToneAnal
+# import ToneAnal
 
 import requests
 from flask import Flask, request
@@ -90,7 +90,6 @@ def send_message(recipient_id, message_text):
     if r.status_code != 200:
         log(r.status_code)
         log(r.text)
-
 
 def log(message):  # simple wrapper for logging to stdout on heroku
     print str(message)
