@@ -1,4 +1,4 @@
-from __future__ import print_function, unicode_literals
+from __future__ import unicode_literals
 import random
 import logging
 import os
@@ -163,7 +163,7 @@ def find_noun(sent):
     noun = None
 
     if not noun:
-        print(sent.pos_tags)
+        # print(sent.pos_tags)
         for w, p in sent.pos_tags:
             if p == 'NN'or p=="NNP":  # This is a noun
                 noun = w

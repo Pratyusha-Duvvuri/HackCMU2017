@@ -28,12 +28,13 @@ def calculateWithResults(data):
     data = json.loads(str(data))
     D={}
     for i in data['document_tone']['tone_categories']:
-        print(i['category_name'])
-        print("-" * len(i['category_name']))
+        # print(i['category_name'])
+        # print("-" * len(i['category_name']))
         for j in i['tones']:
-            print(j['tone_name'].ljust(20),(str(round(j['score'] * 100,1)) + "%").rjust(10))
-        print()
-    print() 
+            break;
+            # print(j['tone_name'].ljust(20),(str(round(j['score'] * 100,1)) + "%").rjust(10))
+    #     print()
+    # print() 
 
 """
 Okay so the idea here is to put in 
@@ -63,7 +64,7 @@ def display_results_fake(data):
     return D
 
 def isScared(D):
-    print(D)
+    # print(D)
     return D['Fear']>30
 
 def isAngry(D):
